@@ -1,0 +1,1370 @@
+/* ************************************************************** */
+/* common                                                         */
+/* ************************************************************** */
+a {
+    -webkit-transition: opacity .5s;
+    color: #c7b199;
+    opacity: .8;
+    transition: opacity .5s;
+  }
+  
+  a:active {
+    opacity: 1;
+  }
+  
+  .img_fit {
+    width: 100%;
+  }
+  
+  img,
+  picture {
+    max-width: 100%;
+  }
+  
+  picture > img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 0%;
+  }
+  
+  h1 {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    color: #a4926c;
+    line-height: 1em;
+  }
+  
+  h2 {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    z-index: 0;
+    position: relative;
+    color: #bdb18d;
+    line-height: 1.0em;
+  }
+  
+  h2::before {
+    -webkit-filter: blur(2px);
+    display: block;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-image: -webkit-gradient(linear, left top, right top, from(#4e4e36), color-stop(90%, transparent));
+    background-image: -webkit-linear-gradient(left, #4e4e36, transparent 90%);
+    background-image: linear-gradient(to right, #4e4e36, transparent 90%);
+    content: "";
+    filter: blur(2px);
+    opacity: .8;
+  }
+  
+  h2::after {
+    display: block;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #b7a173;
+    content: "";
+  }
+  
+  h3 {
+    display: block;
+    padding-bottom: .4em;
+    border-bottom: 1px solid #b8a055;
+    color: #b69f54;
+    line-height: 1em;
+  }
+  
+  h4 {
+    color: #b69f54;
+    line-height: 1em;
+  }
+  
+  .mt_hem {
+    margin-top: 0.5em;
+  }
+  
+  .mt_1em {
+    margin-top: 1.0em;
+  }
+  
+  .mt_2em {
+    margin-top: 2.0em;
+  }
+  
+  .mt_3em {
+    margin-top: 3.0em;
+  }
+  
+  .mt_4em {
+    margin-top: 4.0em;
+  }
+  
+  .mt_5em {
+    margin-top: 5.0em;
+  }
+  
+  .mt_6em {
+    margin-top: 6.0em;
+  }
+  
+  p.fw_b {
+    color: #b69f54;
+    font-weight: bold;
+  }
+  
+  .la_s {
+    letter-spacing: 0;
+  }
+  
+  .wb_nrml {
+    word-break: normal;
+  }
+  
+  .wb_ba {
+    word-break: break-all;
+  }
+  
+  span.fw_b {
+    color: #ea1c1c;
+    font-weight: bold;
+  }
+  
+  html, body {
+    min-width: 320px;
+    height: 100%;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+    line-height: 1.6em;
+    font-family: "dnp-shuei-mincho-pr6n", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", sans-serif, serif;
+    letter-spacing: .05em;
+  }
+  
+  div#pane_contents {
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -webkit-transition: padding-left .5s, padding-right .5s;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0b0a0a;
+    transition: padding-left .5s, padding-right .5s;
+  }
+  
+  div#contents_wrapper {
+    -ms-flex: 1 0 auto;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    z-index: 1;
+    flex: 1 0 auto;
+    min-height: 0%;
+  }
+  
+  footer {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  footer > p {
+    color: #6d6c6c;
+    line-height: 1.4em;
+    font-family: Arial;
+    letter-spacing: 0;
+    text-align: right;
+  }
+  
+  footer > p > img {
+    height: .8em;
+  }
+  
+  footer > picture {
+    display: block;
+    position: absolute;
+  }
+  
+  div.table_wrapper {
+    width: 100%;
+    font-size: .9em;
+  }
+  
+  div.table_wrapper > ul > li {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  div.table_wrapper > ul > li.bc_hl {
+    background-color: #2c231f;
+  }
+  
+  div.table_wrapper > ul > li.bc_th {
+    background-color: #211c12;
+  }
+  
+  div.table_wrapper > ul > li.orange {
+    color: #c7872c;
+  }
+  
+  div.table_wrapper > ul > li.oneline {
+    color: #bdb18d;
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1.0em;
+    letter-spacing: 0.25em;
+  }
+  
+  [class*="wid_"] {
+    display: block;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 0;
+  }
+  
+  .wid_F {
+    width: 100%;
+  }
+  
+  .wid_Q {
+    width: 75%;
+  }
+  
+  .wid_H {
+    width: 50%;
+  }
+  
+  img.frame,
+  .frame > img {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid rgba(155, 155, 155, 0.5);
+  }
+  
+  /* ************************************************************** */
+  /* side menu                                                      */
+  /* ************************************************************** */
+  div#pane_menu {
+    -webkit-transition: margin-left .5s, margin-right .5s;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #000;
+    transition: margin-left .5s, margin-right .5s;
+  }
+  
+  div#pane_menu > a {
+    display: block;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 0;
+  }
+  
+  div#pane_menu > a::before {
+    display: block;
+    position: relative;
+    content: "";
+  }
+  
+  div#pane_menu > a > picture {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  div#pane_menu > a > picture > img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  div#pane_menu > ul {
+    display: block;
+  }
+  
+  div#pane_menu > ul > li {
+    padding: .5em 0;
+  }
+  
+  div#pane_menu > ul > li > a {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-transition: color .3s, opacity .3s;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    color: #949494;
+    line-height: 1em;
+    letter-spacing: 0;
+    text-decoration: none;
+    opacity: .8;
+    transition: color .3s, opacity .3s;
+  }
+  
+  div#pane_menu > ul > li > a::before {
+    display: block;
+    position: relative;
+    width: 6px;
+    height: 10px;
+    margin-right: 10px;
+    margin-bottom: -4px;
+    background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/menu/dot_w.png");
+    background-position: 0% 0%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    content: "";
+  }
+  
+  div#pane_menu > ul > li > a.crr {
+    color: #a18e69;
+  }
+  
+  div#pane_menu > ul > li > a.crr::after {
+    opacity: 1;
+  }
+  
+  div#pane_menu > div#selectPlatform {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #665d48;
+    border-collapse: collapse;
+    background-color: #665d48;
+  }
+  
+  div#pane_menu > div#selectPlatform > p {
+    height: 1.2em;
+    color: #000;
+    line-height: 1em;
+    letter-spacing: 0;
+  }
+  
+  #menu_button {
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  
+  #menu_button::before {
+    display: block;
+    position: relative;
+    padding-top: 94.54%;
+    background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/menu/icon_o.jpg");
+    background-position: 0% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+  }
+  
+  #menu_button::after {
+    -webkit-transition: opacity .2s ease;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/menu/icon_c.jpg");
+    background-position: 0% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    opacity: 0;
+    transition: opacity .2s ease;
+  }
+  
+  #menu_button.open::after {
+    opacity: 1;
+  }
+  
+  div#menuopen_background {
+    display: none;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* ************************************************************** */
+  /* contents                                                       */
+  /* ************************************************************** */
+  div#main_wrapper {
+    display: block;
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  
+  div#main_wrapper > div {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    background-size: contain;
+  }
+  
+  .notice_wrapper {
+    z-index: 0;
+    position: relative;
+    min-height: 5em;
+    background-color: rgba(61, 52, 35, 0.7);
+  }
+  
+  .notice_wrapper::before, .notice_wrapper::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: -webkit-gradient(linear, right top, left top, from(#967f4e), color-stop(#fddc95), to(#967f4e));
+    background: -webkit-linear-gradient(right, #967f4e, #fddc95, #967f4e);
+    background: linear-gradient(to left, #967f4e, #fddc95, #967f4e);
+    content: "";
+  }
+  
+  .notice_wrapper::before {
+    top: 0;
+  }
+  
+  .notice_wrapper::after {
+    bottom: 0;
+  }
+  
+  .notice_wrapper > div {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #d4d0c5;
+    font-size: .9em;
+  }
+  
+  [class*="img_fix_"] {
+    position: relative;
+  }
+  
+  [class*="img_fix_"] > img,
+  [class*="img_fix_"] > picture {
+    display: block;
+    z-index: 1;
+    width: inherit;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  [class*="img_fix_c"].atc_fix.ratio16_9::before {
+    display: block;
+    padding-top: 56.3%;
+    content: "";
+  }
+  
+  [class*="img_fix_c"].atc_fix.ratio4_3::before {
+    display: block;
+    padding-top: 75%;
+    content: "";
+  }
+  
+  [class*="img_fix_c"].atc_fix.ratio400_247::before {
+    display: block;
+    padding-top: 61.75%;
+    content: "";
+  }
+  
+  [class*="img_fix_c"].atc_fix > img,
+  [class*="img_fix_c"].atc_fix > picture {
+    display: block;
+    position: fixed;
+  }
+  
+  /* + media query ++++++++++++++++++++++++++++++++++++++++++++++++ */
+  
+  p > img.key_icon {
+    display: inline-block;
+    width: auto;
+    height: 1.2em;
+    margin-right: .3em;
+    padding: .1em 0;
+    line-height: 0;
+    vertical-align: sub;
+  }
+  
+  p > img.key_icon.large {
+    height: 1.8em;
+  }
+  
+  div.pager_wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  div.pager_wrapper > a {
+    -webkit-transition: opacity .5s;
+    display: block;
+    width: 45%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: .8;
+    transition: opacity .5s;
+  }
+  
+  div.pager_wrapper > a::before {
+    display: block;
+    padding-top: 22%;
+    content: "";
+  }
+  
+  div.pager_wrapper > a.next {
+    background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/nav_next.png");
+  }
+  
+  div.pager_wrapper > a.prev {
+    background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/nav_prev.png");
+  }
+  
+  div.pager_wrapper > a.hddn {
+    visibility: hidden;
+  }
+  
+  /* ************************************************************** */
+  /* page navi                                                      */
+  /* ************************************************************** */
+  .navi_wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    list-style-type: none;
+  }
+  
+  .navi_wrapper > li {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+  
+  .navi_wrapper > li > a {
+    display: block;
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  .navi_wrapper > li > a::before, .navi_wrapper > li > a::after {
+    -webkit-transition: opacity .4s ease;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    transition: opacity .4s ease;
+  }
+  
+  .navi_wrapper > li > a::before {
+    display: block;
+    opacity: 1;
+  }
+  
+  .navi_wrapper > li > a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  
+  ul.list_dot,
+  ul.list_notice,
+  ul.list_asterisk,
+  ul.list_number {
+    display: table;
+    list-style-type: none;
+  }
+  
+  ul.list_dot > li,
+  ul.list_notice > li,
+  ul.list_asterisk > li,
+  ul.list_number > li {
+    display: table-row;
+    counter-increment: table-ol;
+  }
+  
+  ul.list_dot > li::before,
+  ul.list_notice > li::before,
+  ul.list_asterisk > li::before,
+  ul.list_number > li::before {
+    display: table-cell;
+    padding-right: .5em;
+  }
+  
+  ul.list_notice.red {
+    color: #be221f;
+  }
+  
+  ul.list_notice > li {
+    font-size: .9em;
+  }
+  
+  ul.list_dot > li::before {
+    content: "\30FB";
+  }
+  
+  ul.list_dot.clr > li::before {
+    color: #a4926c;
+  }
+  
+  ul.list_notice > li::before {
+    content: "\203B";
+  }
+  
+  ul.list_asterisk > li::before {
+    content: "*";
+  }
+  
+  ul.list_number > li::before {
+    width: 1.5em;
+    content: counter(table-ol) ".";
+  }
+  
+  #trademarks {
+    font-size: .8em;
+    line-height: 1.4em;
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    letter-spacing: 0;
+  }
+  
+  #trademarks > img {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 1em;
+  }
+  
+  div#platformWrapper {
+    display: none;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  
+  div#platformWrapper.view {
+    display: block;
+  }
+  
+  div#platformWrapper > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  div#platformWrapper > div > ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  
+  div#platformWrapper > div > ul > li {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    background-color: #000;
+  }
+  
+  div#platformWrapper > div > ul > li > p {
+    display: block;
+    position: relative;
+    height: 1.1em;
+    color: #ccc;
+    line-height: 1em;
+    letter-spacing: 0;
+  }
+  
+  @media all and (min-width: 768px) {
+    a:hover {
+      opacity: 1;
+    }
+    h1 {
+      padding-bottom: 24px;
+      padding-left: 8px;
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/h1_borderbottom_w.png");
+      background-size: 888px 20px;
+      font-size: 52px;
+    }
+    h2 {
+      width: 100%;
+      max-width: 1015px;
+      height: 50px;
+      padding-left: 30px;
+      font-size: 36px;
+    }
+    h2::after {
+      width: 4px;
+    }
+    h3 {
+      font-size: 1.6em;
+    }
+    h4 {
+      font-size: 1.4em;
+    }
+    .only_nrrw {
+      display: none !important;
+    }
+    html, body {
+      font-size: 18px;
+      word-break: break-word;
+    }
+    footer {
+      width: 90%;
+      max-width: 1080px;
+      padding: 0 1em calc(2em + 52px);
+      word-break: keep-all;
+    }
+    footer > p {
+      max-width: 520px;
+      margin-left: auto;
+      font-size: .7em;
+    }
+    footer > picture {
+      right: 1em;
+      bottom: 2em;
+    }
+    footer > picture.ps5 {
+      width: 432px;
+      height: 52px;
+    }
+    footer > picture.ps4 {
+      width: 408px;
+      height: 53px;
+    }
+    footer > picture.xb {
+      width: 296px;
+      height: 11px;
+    }
+    div.table_wrapper {
+      display: table;
+      position: relative;
+      border-collapse: collapse;
+    }
+    div.table_wrapper.ratio433 > ul > li:nth-child(1) {
+      width: 40%;
+    }
+    div.table_wrapper.ratio433 > ul > li:nth-child(2) {
+      width: 30%;
+    }
+    div.table_wrapper.ratio433 > ul > li:nth-child(3) {
+      width: 30%;
+    }
+    div.table_wrapper > ul {
+      display: table-row;
+    }
+    div.table_wrapper > ul > li {
+      display: table-cell;
+      padding-top: .75em;
+      padding-right: 1em;
+      padding-bottom: .75em;
+      padding-left: 1em;
+      border-top: 1px solid #55462b;
+      border-bottom: 1px solid #55462b;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    div.table_wrapper > ul > li.center {
+      text-align: center;
+    }
+    div.table_wrapper > ul > li.border_L {
+      border-left: 1px solid #55462b;
+    }
+    div.table_wrapper > ul > li.no_rtn {
+      word-break: keep-all;
+    }
+    div.table_wrapper > ul > li.bc_th {
+      width: 22%;
+    }
+    div.table_wrapper > ul > li.oneline {
+      padding-top: 1.5em;
+    }
+    div#pane_menu {
+      width: 400px;
+      padding-top: 60px;
+      border-right: 2px solid #4c3e1e;
+      border-collapse: collapse;
+    }
+    div#pane_menu::before {
+      position: absolute;
+      top: 0;
+      right: 4px;
+      width: 1px;
+      height: 100%;
+      background-color: #4c3e1e;
+      content: "";
+    }
+    div#pane_menu > a {
+      width: 233px;
+    }
+    div#pane_menu > a::before {
+      padding-top: 30.47%;
+    }
+    div#pane_menu > ul {
+      width: 60%;
+      margin-top: 20px;
+      margin-left: 5.6em;
+    }
+    div#pane_menu > ul > li > a {
+      font-size: 18px;
+    }
+    div#pane_menu > ul > li > a::after {
+      -webkit-transition: opacity .4s ease;
+      display: block;
+      position: absolute;
+      top: -16px;
+      left: -41px;
+      width: 100%;
+      height: 100%;
+      background-position: 0% 0%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+      opacity: 0;
+      transition: opacity .4s ease;
+    }
+    div#pane_menu > ul > li > a:hover {
+      color: #a18e69;
+    }
+    div#pane_menu > ul > li > a:hover::after {
+      opacity: 1;
+    }
+    div#pane_menu > ul > li:nth-child(1) > a::after,
+    div#pane_menu > ul > li:nth-child(3) > a::after,
+    div#pane_menu > ul > li:nth-child(4) > a::after,
+    div#pane_menu > ul > li:nth-child(5) > a::after,
+    div#pane_menu > ul > li:nth-child(6) > a::after,
+    div#pane_menu > ul > li:nth-child(7) > a::after,
+    div#pane_menu > ul > li:nth-child(10) > a::after,
+    div#pane_menu > ul > li:nth-child(13) > a::after {
+      width: 212px;
+      height: 54px;
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/menu/on_s.png");
+    }
+    div#pane_menu > ul > li:nth-child(2) > a::after,
+    div#pane_menu > ul > li:nth-child(8) > a::after,
+    div#pane_menu > ul > li:nth-child(9) > a::after,
+    div#pane_menu > ul > li:nth-child(11) > a::after,
+    div#pane_menu > ul > li:nth-child(12) > a::after {
+      width: 257px;
+      height: 53px;
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/menu/on_l.png");
+    }
+    div#pane_menu > div#selectPlatform {
+      -webkit-transition: background-color .4s ease;
+      width: 182px;
+      height: 35px;
+      margin-top: 20px;
+      margin-left: 94px;
+      cursor: pointer;
+      transition: background-color .4s ease;
+    }
+    div#pane_menu > div#selectPlatform > p {
+      -webkit-transition: color .4s ease;
+      font-size: 14px;
+      transition: color .4s ease;
+    }
+    div#pane_menu > div#selectPlatform:hover {
+      background-color: #000;
+    }
+    div#pane_menu > div#selectPlatform:hover > p {
+      color: #665d48;
+    }
+    #menu_button {
+      display: block;
+      width: 3.6em;
+    }
+    div#menuopen_background.open {
+      display: block;
+    }
+    div#main_wrapper {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 90%;
+      padding-top: 5em;
+      padding-bottom: 8em;
+    }
+    div#main_wrapper > div {
+      padding: 0 4em;
+    }
+    .notice_wrapper > div {
+      padding: 1.5em 3em;
+    }
+    [class*="img_fix_w"].atc_fix > img,
+    [class*="img_fix_w"].atc_fix > picture {
+      display: block;
+      position: fixed;
+    }
+    [class*="img_fix_w"].atc_fix.ratio16_9::before {
+      display: block;
+      padding-top: 56.3%;
+      content: "";
+    }
+    [class*="img_fix_w"].atc_fix.ratio4_3::before {
+      display: block;
+      padding-top: 75%;
+      content: "";
+    }
+    [class*="img_fix_w"].atc_fix.ratio400_247::before {
+      display: block;
+      padding-top: 61.75%;
+      content: "";
+    }
+    div.pager_wrapper > a:hover {
+      opacity: 1;
+    }
+    .navi_wrapper {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 4em;
+    }
+    .navi_wrapper > li {
+      width: 45%;
+      max-width: 447px;
+    }
+    .navi_wrapper > li > a::before, .navi_wrapper > li > a::after {
+      background-size: 100% auto;
+    }
+    .navi_wrapper > li > a::before {
+      padding-top: 13.2%;
+    }
+    .navi_wrapper > li > a:hover::before {
+      opacity: 0;
+    }
+    .navi_wrapper > li > a:hover::after {
+      opacity: 1;
+    }
+    .navi_wrapper > li:nth-child(1) > a::before {
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/prev_n.png");
+    }
+    .navi_wrapper > li:nth-child(1) > a::after {
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/prev_h.png");
+    }
+    .navi_wrapper > li:nth-child(2) > a::before {
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/next_n.png");
+    }
+    .navi_wrapper > li:nth-child(2) > a::after {
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/next_h.png");
+    }
+    .navi_wrapper.fst {
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+    }
+    .navi_wrapper.fst > li:nth-child(1) > a::before {
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/next_n.png");
+    }
+    .navi_wrapper.fst > li:nth-child(1) > a::after {
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/next_h.png");
+    }
+    div#platformWrapper > div {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+    div#platformWrapper > div > p {
+      margin-bottom: 5em;
+    }
+    div#platformWrapper > div > ul > li {
+      -webkit-transition: background-color .4s ease;
+      width: 247px;
+      height: 64px;
+      cursor: pointer;
+      transition: background-color .4s ease;
+    }
+    div#platformWrapper > div > ul > li > p {
+      -webkit-transition: color .4s ease;
+      font-size: 21px;
+      transition: color .4s ease;
+    }
+    div#platformWrapper > div > ul > li:hover {
+      background-color: #ccc;
+    }
+    div#platformWrapper > div > ul > li:hover > p {
+      color: #000;
+    }
+  }
+  
+  @media all and (max-width: 767px) {
+    h1 {
+      padding-bottom: 4%;
+      padding-left: 0.15em;
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/h1_borderbottom_n.png");
+      background-size: 92.5vw 2.19vw;
+      font-size: 7.29vw;
+    }
+    h2 {
+      width: 100%;
+      height: 8.33vw;
+      padding-top: .1em;
+      padding-left: .4em;
+      font-size: 6.04vw;
+    }
+    h2::after {
+      width: 0.63vw;
+    }
+    h3 {
+      font-size: 1.2em;
+    }
+    h4 {
+      font-size: 1.1em;
+    }
+    .only_wide {
+      display: none !important;
+    }
+    html, body {
+      font-size: 3.75vw;
+      word-break: break-all;
+    }
+    footer {
+      width: 100%;
+      padding-bottom: calc( 2em + 11.56vw + 9.69vw);
+      text-align: center;
+    }
+    footer > p {
+      font-size: 2.5vw;
+      text-align: center;
+    }
+    footer > picture {
+      right: 0;
+      bottom: 11.56vw;
+      left: 0;
+      margin: 0 auto;
+    }
+    footer > picture.ps5 {
+      width: 81.15vw;
+      height: 9.69vw;
+    }
+    footer > picture.ps4 {
+      width: 81.46vw;
+      height: 9.79vw;
+    }
+    footer > picture.xb {
+      width: 55.63vw;
+      height: 1.98vw;
+    }
+    div.table_wrapper {
+      display: block;
+    }
+    div.table_wrapper > ul {
+      list-style-type: none;
+    }
+    div.table_wrapper > ul > li {
+      padding-top: .5em;
+      padding-right: .5em;
+      padding-left: .5em;
+    }
+    div.table_wrapper > ul > li.bc_th {
+      margin-top: 1em;
+      padding-bottom: .5em;
+    }
+    div.table_wrapper > ul > li.oneline {
+      padding-top: 1.0em;
+    }
+    div#pane_menu {
+      width: 100%;
+      margin-left: -100%;
+      padding-top: 24.69vw;
+    }
+    div#pane_menu.open {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    div#pane_menu > a {
+      width: 77.6vw;
+    }
+    div#pane_menu > a::before {
+      padding-top: 28.05%;
+    }
+    div#pane_menu > ul {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      margin-left: 25%;
+    }
+    div#pane_menu > ul > li > a {
+      font-size: 1.1em;
+    }
+    div#pane_menu > div#selectPlatform {
+      width: 64.27vw;
+      height: 12.29vw;
+      margin-top: 1em;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    div#pane_menu > div#selectPlatform > p {
+      font-size: 1.1em;
+    }
+    #menu_button {
+      display: block;
+      width: 16.94vw;
+    }
+    div#main_wrapper {
+      width: 100%;
+    }
+    div#main_wrapper > div {
+      padding: 25.31vw 5vw 6em;
+    }
+    div#main_wrapper > div#top {
+      padding: 2em 5vw 6em;
+    }
+    .notice_wrapper > div {
+      padding: 1.5em 1.5em;
+    }
+    [class*="img_fix_n"].atc_fix > img,
+    [class*="img_fix_n"].atc_fix > picture {
+      display: block;
+      position: fixed;
+    }
+    [class*="img_fix_n"].atc_fix.ratio16_9::before {
+      display: block;
+      padding-top: 56.3%;
+      content: "";
+    }
+    [class*="img_fix_n"].atc_fix.ratio4_3::before {
+      display: block;
+      padding-top: 75%;
+      content: "";
+    }
+    [class*="img_fix_n"].atc_fix.ratio400_247::before {
+      display: block;
+      padding-top: 61.75%;
+      content: "";
+    }
+    .navi_wrapper {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 4em;
+    }
+    .navi_wrapper > li {
+      width: 50%;
+    }
+    .navi_wrapper > li > a::before, .navi_wrapper > li > a::after {
+      background-size: contain;
+    }
+    .navi_wrapper > li > a::before {
+      padding-top: 17.71%;
+    }
+    .navi_wrapper > li:nth-child(1) > a::before {
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/prev.png");
+    }
+    .navi_wrapper > li:nth-child(2) > a::before {
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/next.png");
+    }
+    .navi_wrapper.fst > li:nth-child(1) {
+      width: 65.21%;
+    }
+    .navi_wrapper.fst > li:nth-child(1) > a {
+      width: 100%;
+    }
+    .navi_wrapper.fst > li:nth-child(1) > a::before {
+      background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/next.png");
+    }
+    .navi_wrapper.lst > li:nth-child(1) {
+      width: 65.21%;
+    }
+    div#platformWrapper > div {
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+    }
+    div#platformWrapper > div > p {
+      margin-top: 6em;
+      margin-bottom: 3em;
+    }
+    div#platformWrapper > div > ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 59.06vw;
+    }
+    div#platformWrapper > div > ul > li {
+      width: 100%;
+      height: 15.42vw;
+    }
+    div#platformWrapper > div > ul > li:not(:first-child) {
+      margin-top: 15.42vw;
+    }
+    div#platformWrapper > div > ul > li > p {
+      font-size: 5vw;
+    }
+  }
+  
+  @media all and (min-width: 1300px) {
+    div#pane_contents {
+      padding-left: 400px;
+    }
+    #menu_button {
+      display: none;
+    }
+  }
+  
+  @media all and (max-width: 1299px) and (min-width: 768px) {
+    div#pane_menu {
+      margin-left: -429px;
+    }
+    div#pane_menu.open {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  
+  @media all and (min-width: 1355px) {
+    div#platformWrapper > div > ul {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      flex-direction: row;
+      justify-content: space-between;
+      width: calc( ( 247px * 5 ) + ( 24px * 4 ));
+      height: 64px;
+    }
+  }
+  
+  @media all and (max-width: 1354px) and (min-width: 768px) {
+    div#platformWrapper > div > ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 247px;
+      height: calc( ( 64px * 5 ) + ( 36px * 4 ));
+    }
+  }
+  
