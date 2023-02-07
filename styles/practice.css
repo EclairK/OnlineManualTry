@@ -1,0 +1,327 @@
+html,
+body {
+    min-width: 320px;
+    height: 100%;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+    line-height: 1.6em;
+    font-family: "dnp-shuei-mincho-pr6n", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", sans-serif, serif;
+    letter-spacing: .05em;
+}
+
+
+div#pane_contents {
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0b0a0a;
+    transition: padding-left .5s, padding-right .5s;
+    padding-left: 300px;
+}
+
+div#contents_wrapper {
+   
+    z-index: 1;
+    flex: 1 0 auto;
+    min-height: 0%;
+}
+
+div#main_wrapper {
+    display: block;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 3em;
+    padding-bottom: 8em;
+}
+
+div#main_wrapper>div {
+   
+    box-sizing: border-box;
+    width: 100%;
+    background-size: contain;
+}
+
+/* ************************************************************** */
+/* side menu                                                      */
+/* ************************************************************** */
+
+div#pane_menu {
+    box-sizing: border-box;
+    display: block;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #000;
+    transition: margin-left .5s, margin-right .5s;
+    width: 320px;
+    padding-top: 60px;
+    border-right: 2px solid #4c3e1e;
+    border-collapse: collapse;
+}
+
+div#pane_menu::before {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    width: 1px;
+    height: 100%;
+    background-color: #4c3e1e;
+    content: "";
+}
+
+div#pane_menu>a {
+    display: block;
+    position: relative;
+    width: 220px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 0;
+}
+
+div#pane_menu>a::before {
+    display: block;
+    position: relative;
+    padding-top: 27.47%;
+    content: "";
+}
+
+div#pane_menu>a>picture {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div#pane_menu>a>picture>img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+div#pane_menu>ul {
+    display: block;
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 4.6em;
+}
+
+div#pane_menu>ul>li {
+    padding: .5em 0;
+}
+
+div#pane_menu>ul>li>a {
+    display: inline-flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    color: #949494;
+    line-height: 1em;
+    letter-spacing: 0;
+    text-decoration: none;
+    font-size: 18px;
+    opacity: .8;
+    transition: color .3s, opacity .3s;
+}
+
+div#pane_menu>ul>li>a::before {
+    display: block;
+    position: relative;
+    width: 6px;
+    height: 10px;
+    margin-right: 10px;
+    margin-bottom: -4px;
+    background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/menu/dot_w.png");
+    background-position: 0% 0%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+div#pane_menu>ul>li>a::after {
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: -41px;
+    width: 100%;
+    height: 100%;
+    background-position: 0% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+div#pane_menu>ul>li>a:hover {
+    color: #a18e69;
+}
+
+div#pane_menu>ul>li>a:hover::after {
+    opacity: 1;
+}
+
+div#pane_menu>ul>li>a.crr {
+    color: #a18e69;
+}
+
+div#pane_menu>ul>li>a.crr::after {
+    opacity: 1;
+}
+
+div#pane_menu>div#selectPlatform {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #665d48;
+    border-collapse: collapse;
+    background-color: #665d48;
+    width: 182px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 60px;
+    cursor: pointer;
+    transition: background-color .4s ease;
+}
+
+div#pane_menu>div#selectPlatform>p {
+    height: 1.2em;
+    color: #000;
+    line-height: 1em;
+    letter-spacing: 0;
+    font-size: 14px;
+    transition: color .4s ease;
+}
+
+div#pane_menu>div#selectPlatform:hover {
+    background-color: #000;
+}
+
+div#pane_menu>div#selectPlatform:hover>p {
+    color: #665d48;
+}
+
+
+div#pane_menu>ul>li:nth-child(1)>a::after,
+div#pane_menu>ul>li:nth-child(3)>a::after,
+div#pane_menu>ul>li:nth-child(4)>a::after,
+div#pane_menu>ul>li:nth-child(5)>a::after,
+div#pane_menu>ul>li:nth-child(6)>a::after,
+div#pane_menu>ul>li:nth-child(7)>a::after,
+div#pane_menu>ul>li:nth-child(10)>a::after,
+div#pane_menu>ul>li:nth-child(13)>a::after {
+    width: 212px;
+    height: 54px;
+    background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/menu/on_s.png");
+}
+
+div#pane_menu>ul>li:nth-child(2)>a::after,
+div#pane_menu>ul>li:nth-child(8)>a::after,
+div#pane_menu>ul>li:nth-child(9)>a::after,
+div#pane_menu>ul>li:nth-child(11)>a::after,
+div#pane_menu>ul>li:nth-child(12)>a::after {
+    width: 257px;
+    height: 53px;
+    background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/menu/on_l.png");
+}
+
+h1 {
+    box-sizing: border-box;
+    display: block;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    color: #a4926c;
+    line-height: 1em;
+    padding-bottom: 24px;
+    padding-left: 8px;
+    background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/common/h1_borderbottom_w.png");
+    background-size: 888px 20px;
+    font-size: 42px;
+}
+
+.mt_hem {
+    margin-top: 0.5em;
+}
+
+.mt_1em {
+    margin-top: 1.0em;
+}
+
+.mt_2em {
+    margin-top: 2.0em;
+}
+
+.mt_3em {
+    margin-top: 3.0em;
+}
+
+.mt_4em {
+    margin-top: 4.0em;
+}
+
+.mt_5em {
+    margin-top: 5.0em;
+}
+
+.mt_6em {
+    margin-top: 6.0em;
+}
+
+div#pane_contents {
+    background-repeat: no-repeat;
+}
+
+div#main_wrapper>div>p {
+    line-height: 2em;
+    /*文字の間隔*/
+    text-align: center;
+    font-size: 1.3em;
+
+}
+
+
+div#pane_contents {
+    background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/story/background_w.jpg");
+    background-size: 1520px 1318px;
+}
+
+
+video,
+img,
+picture {
+  max-width: 100%;
+  
+}
+
+picture > img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0%;
+  
+}
+
+video.frame,
+.frame > video {
+  box-sizing: border-box;
+  border: 1px solid rgba(155, 155, 155, 0.5);
+}
+
+img.frame,
+.frame > img {
+  box-sizing: border-box;
+  border: 1px solid rgba(155, 155, 155, 0.5);
+}

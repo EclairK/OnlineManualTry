@@ -5,10 +5,11 @@ div#pane_contents {
     background-repeat: no-repeat;
   }
   
-  #main_wrapper > div > p {
-    line-height: 2em;
+div#main_wrapper > div > p {
+    line-height: 2em; /*文字の間隔*/
   }
   
+/*背景画像のレスポンシブ設定↓*/
   @media all and (min-width: 1300px) {
     div#pane_contents {
       background-position: 400px 100%;
@@ -26,8 +27,10 @@ div#pane_contents {
       background-image: url("https://media.fromsoftware.jp/fromsoftware/manual/eldenring/resources/images/story/background_w.jpg");
       background-size: 1520px 1318px;
     }
+
+
     #main_wrapper > div > p {
-      text-align: center;
+      text-align: center;/*文字のアライン*/
     }
   }
   
@@ -40,5 +43,7 @@ div#pane_contents {
     #main_wrapper > div > p {
       font-size: .9em;
     }
+
+    /*背景画像のレスポンシブ設定↑*/
   }
   
